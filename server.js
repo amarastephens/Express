@@ -9,6 +9,10 @@ app.get('/', (req, res, next) => {
 
 app.listen(3000)
 
+app.listen(PORT, () => {
+    console.log(`Your server is running on port ${PORT}`);
+  });
+
 app.use(express.static(path.join(__dirname,"../public")))
 
 // app.get('/', (req, res) => {
@@ -19,11 +23,12 @@ app.use(express.static(path.join(__dirname,"../public")))
 //     res.sendFile(path.join(__dirname, "../public/css/styles.css"))
 // })
 
-// app.get('/css/styles.css', (req, res) => {
-//     res.sendFile(path.join(__dirname, "../public/css/styles.css"))
-// })
 
 app.use((req, res, next) => {
 console.log(req.url)
     next()
 })
+
+app.listen(PORT, () => {
+    console.log(`Your server is running on port ${PORT}`);
+  });
