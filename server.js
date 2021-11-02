@@ -9,9 +9,6 @@ app.get('/', (req, res, next) => {
 
 app.listen(3000)
 
-app.listen(PORT, () => {
-    console.log(`Your server is running on port ${PORT}`);
-  });
 
 app.use(express.static(path.join(__dirname,"../public")))
 
